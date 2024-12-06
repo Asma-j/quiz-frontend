@@ -1,0 +1,84 @@
+.hero-section {
+  text-align: center;
+  position: relative;
+  padding: 50px 0;
+}
+
+.cta-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background-color: #45a049;
+}
+
+.icons {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.bubble-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: bubble-animation 10s infinite;
+}
+
+@keyframes bubble-animation {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+  }
+}
+
+.fish-animation-right,
+.fish-animation-left {
+  position: absolute;
+  width: 80px;
+  animation: swim 10s linear infinite;
+}
+
+.fish-animation-right {
+  right: -100px;
+  animation-name: swim-right;
+}
+
+.fish-animation-left {
+  left: -100px;
+  animation-name: swim-left;
+}
+
+@keyframes swim-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes swim-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
